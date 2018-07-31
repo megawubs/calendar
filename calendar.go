@@ -12,6 +12,10 @@ type Calendar struct {
 	Events  []Event
 }
 
+func NewCalendar(programId string) Calendar {
+	return Calendar{Version: "2.0", ProId: programId,}
+}
+
 func (c *Calendar) Add(event Event) {
 	c.Events = append(c.Events, event)
 }
